@@ -1,0 +1,109 @@
+$black-100: #000000;
+$white-100: #ffffff;
+$gray-100: #969696;
+$gray-200: #777777;
+$gray-offset-100: 0px 0px 3px 2px rgba(231,231,231,0.78);
+
+@mixin transition($duration) {
+  transition: cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition-duration: $duration;
+  transition-property: all;
+}
+
+@keyframes fadeInUpAnimation {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@mixin fadeUp($delay) {
+  animation: fadeInUpAnimation 1s $delay both;
+}
+
+.grid {
+  padding: 2rem 1rem;
+
+  @media screen and (max-width: 991px) {
+    padding: 1.5rem 1rem;
+  }
+
+  &__container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: auto;
+    justify-content: center;
+    gap: 2.5rem;
+
+    @media screen and (max-width: 991px) {
+      grid-template-columns: 1fr;
+      max-width: 300px;
+      gap: 2rem;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: $gray-offset-100;
+    -webkit-box-shadow: $gray-offset-100;
+    -moz-box-shadow: $gray-offset-100;
+    @include transition(200ms);
+    @for $i from 0 through 3 {
+      &:nth-of-type(#{$i + 1}) {
+        @include fadeUp(#{200 * $i}ms)
+      }
+    }
+
+    &:hover {
+      margin-top: -0.313rem;
+      margin-bottom: 0.313rem;
+    }
+  }
+
+  &__image {
+    border-radius: 5px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__text {
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  &__link {
+    margin-top: auto;
+    color: $black-100;
+    text-decoration: none;
+    border: 2px solid $black-100;
+    padding: 0.5rem 0.9rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 80px;
+    @include transition(300ms);
+
+    &:hover {
+      background-color: $gray-100;
+      border-color: $gray-100;
+      color: $white-100;
+    }
+
+    &:active, &:focus {
+      background-color: $gray-200;
+      border-color: $gray-200;
+      color: $white-100;
+    }
+  }
+}
