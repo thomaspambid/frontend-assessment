@@ -10,13 +10,16 @@ export default function TabAccordion(props){
 
   function clickTab(value) {
     setActive(value);
-    let width = window.innerWidth;
-    if(active === value && width <= 991){
+  }
+
+  function clickAccordion(value) {
+    setActive(value);
+    
+    if(active === value){
       setActive();
     }
   }
 
-  window.addEventListener("resize", clickTab);
 
   return(
     <section className='tab'>
@@ -29,7 +32,7 @@ export default function TabAccordion(props){
         <div className='tab__content'>
           {content.map((item, index) => (
             <div key={index} className={'tab__accordion ' + (active === index ? ' tab__accordion--active' : '')}>
-              <p className='tab__title' onClick={() => clickTab(index)}>
+              <p className='tab__title' onClick={() => clickAccordion(index)}>
                 {item.title}
               </p>
               <p className={'tab__text' + (active === index ? ' tab__text--active' : '')}>
