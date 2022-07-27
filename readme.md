@@ -34,6 +34,7 @@ Read the `data.json` file and display the data as tabs on desktop and an accordi
 * Improve the user experience with meaningful animations/transitions.
 * Design and styling.
 * Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
+*   Answer: Because the ( + 'a' ) is a unary operator that is converting a string to a number. And the value of that will become "NaN" ( Not a Number ) because it is a string and not a number. And then we use a ".toLowerCase()" function to make all the letters small. So it prints out b + a + nan + a = banana.
 
 Submission
 ---
