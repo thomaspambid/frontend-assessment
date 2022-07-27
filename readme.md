@@ -38,3 +38,7 @@ Read the `data.json` file and display the data as tabs on desktop and an accordi
 Submission
 ---
 We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
+
+1. Please run "npm start" on the terminal of vscode to start the app
+2. "/" is the default url Exercise 1
+3. "/exercise2" is the url for Exercise 2
