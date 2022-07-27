@@ -39,6 +39,7 @@ Submission
 ---
 We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
 
-1. Please run "npm start" on the terminal of vscode to start the app
-2. "/" is the default url Exercise 1
-3. "/exercise2" is the url for Exercise 2
+1. Kindly target the "pambid-test" folder in order to run the app
+2. Please run "npm start" on the terminal of vscode to start the app
+3. "/" is the default url Exercise 1
+4. "/exercise2" is the url for Exercise 2
