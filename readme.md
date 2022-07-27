@@ -34,11 +34,13 @@ Read the `data.json` file and display the data as tabs on desktop and an accordi
 * Improve the user experience with meaningful animations/transitions.
 * Design and styling.
 * Explain why the result of `('b' + 'a' + + 'a' + 'a').toLowerCase()` is `banana`.
+*   Answer: Because the ( + 'a' ) is a unary operator that is converting a string to a number. And the value of that will become "NaN" ( Not a Number ) because it is a string and not a number. And then we use a ".toLowerCase()" function to make all the letters small. So it prints out b + a + nan + a = banana.
 
 Submission
 ---
 We recommend submitting your completed assessment as a forked repository. Please replace README content with instructions and relevant documentation.
 
-1. Please run "npm start" on the terminal of vscode to start the app
-2. "/" is the default url Exercise 1
-3. "/exercise2" is the url for Exercise 2
+1. Kindly target the "pambid-test" folder in order to run the app
+2. Please run "npm start" on the terminal of vscode to start the app
+3. "/" is the default url Exercise 1
+4. "/exercise2" is the url for Exercise 2
